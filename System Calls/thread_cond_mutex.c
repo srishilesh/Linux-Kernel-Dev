@@ -39,6 +39,9 @@ void *f2()
         pthread_mutex_unlock(&lock);
     }
 }
+
+//      ERROR IN THIS
+
 int main()
 {
     if(pthread_create(&tid[0],NULL,f2,NULL)!=0)
