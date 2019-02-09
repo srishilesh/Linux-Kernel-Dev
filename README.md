@@ -1,2 +1,5 @@
 # Linux-Kernel-Dev
-Shell scripting, System Calls for modifying Linux kernels
+1)Basic programs in C for System calls
+2)Shell scripting
+3)Bash scripting
+4)CPU Scheduling Algorithms
