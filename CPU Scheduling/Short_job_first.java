@@ -18,7 +18,11 @@ public class sjf
     {
         return finish-start;
     }
-
+    static int choosearrivaltime()
+    {
+        int min=Collections.min(at);
+        at.indexOf(min);
+    }
     public static void main(String args[])
     {
         Scanner sc=new Scanner(System.in);
