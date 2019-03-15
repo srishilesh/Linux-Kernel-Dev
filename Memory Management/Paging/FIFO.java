@@ -1,6 +1,5 @@
 import java.util.*;
 import java.io.*;
-
 public class fifo1
 {
     public static void main(String args[])
@@ -26,22 +25,47 @@ public class fifo1
             {
                 //if(found==-1)
                 
-                if(alloc[x]!=req[i])    // Check repetition of values
+                if(checkall(alloc,blk,req[i])==false)    // Check repetition of values by comparison with all the requests
                 {
                     alloc[x]=req[i];    // Does Allocation
                     page=page+1;        // Increment Page fault
+                    x=(x+1)%3;      // Works as Circular Queue to switch between blocks
                 }
                 
-                x=(x+1)%3;      // Works as Circular Queue to switch between blocks
+                
 
             }
-            
-
-            
+            //System.out.println("x = "+x);
+            for(int j=0;j<blk;j++)      // Printing data
+            System.out.print(alloc[j]+" ");
+            System.out.println();
+           
         }
-        for(int i=0;i<blk;i++)      // Printing data
-            System.out.print(alloc[i]+" ");
+        
         System.out.println("Number of Page Faults is "+page);
         System.out.println("Percentage of page Faults are: "+(page/n)*100);
     }
+    public static boolean checkall(int a[],int n,int x)     //Checkall
+    {
+        int f=0;
+        for(int i=0;i<n;i++)
+        {
+            if(a[i]!=x)
+            {f=0;
+            //return false;
+            }
+            else
+            {
+                f=1;
+                return true;
+            }
+
+        }
+        if(f==1)
+        return true;
+        else
+        return false;
+        
+    }
 }
+
