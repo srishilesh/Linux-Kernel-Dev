@@ -6,3 +6,5 @@
 3)Bash scripting
 
 4)CPU Scheduling Algorithms
+
+5)Memory management algorithms
