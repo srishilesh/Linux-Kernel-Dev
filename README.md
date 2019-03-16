@@ -8,3 +8,5 @@
 4)CPU Scheduling Algorithms
 
 5)Memory management algorithms
+
+6) Paging algorithms
