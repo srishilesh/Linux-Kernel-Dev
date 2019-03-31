@@ -9,6 +9,6 @@
 
 5)Memory management algorithms
 
-6) Paging algorithms
+6)Paging algorithms
 
-7) Disk scheduling algorithms
+7)Disk scheduling algorithms
